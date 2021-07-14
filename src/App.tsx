@@ -1,14 +1,30 @@
 import React from 'react';
 import './App.css';
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Link
+} from "react-router-dom";
+
+import Header from "./components/header/header";
+import Main from "./components/main/main";
+import SideBar from "./components/sideBar/sideBar";
 
 function App() {
   return (
-      <>
-          <div className="p-6 items-center justify-center">
-              <h1 className="text-blue-400 font-extrabold">Hello World!</h1>
-              <p className="tracking-widest">This is my first React App.</p>
+      <Router>
+          <div className={"w-full h-full flex"}>
+              <div className={"h-full mr-5"}>
+                  <SideBar></SideBar>
+              </div>
+
+              <div className={"w-full p-4 pl-0"}>
+                  <div className={"mb-4"}><Header></Header></div>
+                  <Main></Main>
+              </div>
           </div>
-      </>
+      </Router>
   );
 }
 
