@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import './App.css';
 import {
     BrowserRouter as Router,
@@ -12,6 +12,8 @@ import Main from "./components/main/main";
 import SideBar from "./components/sideBar/sideBar";
 
 function App() {
+
+
   return (
       <Router>
           <div className={"w-full h-full flex"}>
@@ -19,7 +21,7 @@ function App() {
                   <SideBar></SideBar>
               </div>
 
-              <div className={"w-full p-4 pl-0"}>
+              <div className={"w-full p-4 pl-0 overflow-y-scroll"}>
                   <div className={"mb-4"}><Header></Header></div>
                   <Main></Main>
               </div>
