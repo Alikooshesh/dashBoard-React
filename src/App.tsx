@@ -12,17 +12,17 @@ import Main from "./components/main/main";
 import SideBar from "./components/sideBar/sideBar";
 
 function App() {
-
+    const [sideBarCollapsed , setSideBarCollapsed] = useState<boolean>(false)
 
   return (
       <Router>
           <div className={"w-full h-full flex"}>
               <div className={"h-full mr-5"}>
-                  <SideBar></SideBar>
+                  <SideBar sideBarCollapsed={sideBarCollapsed} setSideBarCollapsed={setSideBarCollapsed}></SideBar>
               </div>
 
               <div className={"w-full p-4 pl-0 overflow-y-scroll"}>
-                  <div className={"mb-4"}><Header></Header></div>
+                  <div className={"mb-4"}><Header sideBarCollapsed={sideBarCollapsed} setSideBarCollapsed={setSideBarCollapsed}></Header></div>
                   <Main></Main>
               </div>
           </div>

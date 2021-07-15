@@ -6,3 +6,13 @@ export interface IdashboardSmallCard{
     text : string,
     color : string
 }
+
+export interface Iheader{
+    sideBarCollapsed : boolean,
+    setSideBarCollapsed : Function
+}
+
+export interface IsideBar{
+    sideBarCollapsed : boolean,
+    setSideBarCollapsed : Function
+}

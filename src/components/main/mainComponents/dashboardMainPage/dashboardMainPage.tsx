@@ -17,7 +17,7 @@ const DashboardMainPage:React.FC = () => {
                 <DashboardSmallCard Icon={<MdPermIdentity className={"w-full h-full text-white"}></MdPermIdentity>} title={"New Users"} text={"118"} color={"bg-red-400"}/>
             </div>
 
-            <div className={"w-full flex bg-white rounded p-5 mb-4"}>
+            <div className={"w-full flex bg-white rounded p-5 mb-4 ring-1 ring-gray-200"}>
                 <div className={"w-8/12 h-90 border-r-2 border-gray-200 flex justify-around content-center"}>
                     <p className={"text-2xl"}>Year's Sale</p>
                     <div className={"w-10/12 pt-5"}>
@@ -30,7 +30,7 @@ const DashboardMainPage:React.FC = () => {
                 </div>
             </div>
 
-            <div className={"w-full bg-white rounded p-5"}>
+            <div className={"w-full bg-white rounded p-5 ring-1 ring-gray-200"}>
                 <p className={"text-2xl"}>Last Orders</p>
                 <table className={"w-full text-center"}>
                     <tr className={"border-b-2"}>
