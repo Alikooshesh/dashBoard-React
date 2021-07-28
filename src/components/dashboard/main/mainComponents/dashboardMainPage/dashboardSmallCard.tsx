@@ -1,5 +1,5 @@
 import React from "react";
-import {IdashboardSmallCard} from "../../../../interfaces";
+import {IdashboardSmallCard} from "../../../../../interfaces";
 
 const DashboardSmallCard:React.FC<IdashboardSmallCard> = (props) => {
     return (

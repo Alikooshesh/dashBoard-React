@@ -1,6 +1,6 @@
 import React from "react";
 import { MdMenu , MdSearch , MdNotificationsNone , MdMessage } from "react-icons/md";
-import {Iheader} from "../../interfaces";
+import {Iheader} from "../../../interfaces";
 
 const Header:React.FC<Iheader> = (props) => {
 

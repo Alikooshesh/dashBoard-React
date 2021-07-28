@@ -1,4 +1,4 @@
-import React, {Component, ReactElement} from "react";
+import React, {Component, ComponentElement, FunctionComponent, ReactElement} from "react";
 
 export interface IdashboardSmallCard{
     Icon:ReactElement,
@@ -15,4 +15,10 @@ export interface Iheader{
 export interface IsideBar{
     sideBarCollapsed : boolean,
     setSideBarCollapsed : Function
+}
+
+export interface Iroutes{
+    path:string,
+    exact : boolean,
+    Component : any
 }

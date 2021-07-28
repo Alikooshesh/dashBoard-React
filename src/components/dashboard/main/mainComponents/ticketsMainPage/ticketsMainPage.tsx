@@ -1,6 +1,7 @@
 import React from "react";
+import {RouteComponentProps} from 'react-router-dom'
 
-const TicketsMainPage:React.FC= () => {
+const TicketsMainPage= (props:RouteComponentProps) => {
     return (
         <div className={"w-full h-full"}>
             <div className={"w-full h-auto mb-4 flex justify-start content-center"}>
@@ -32,7 +33,7 @@ const TicketsMainPage:React.FC= () => {
                     </tr>
                     <tr>
                         <td className={"text-blue-500"}><a href={"#"}>need support</a></td>
-                        <td>Wating ...</td>
+                        <td>Closed</td>
                         <td>21 Jul 2021</td>
                     </tr>
                 </table>

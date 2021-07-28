@@ -7,25 +7,28 @@ import {
     Link
 } from "react-router-dom";
 
-import Header from "./components/header/header";
-import Main from "./components/main/main";
-import SideBar from "./components/sideBar/sideBar";
+import Header from "./components/dashboard/header/header";
+import Main from "./components/dashboard/main/main";
+import SideBar from "./components/dashboard/sideBar/sideBar";
+import {mainRoutes} from "./routes/mainRoutes";
+import PrivateRoute from "./components/privateRoute/privateRoute";
+import {useDispatch, useSelector} from "react-redux";
+import {login, logout} from "./redux/reducer/aouth.reducer/aouth.reducer";
 
 function App() {
-    const [sideBarCollapsed , setSideBarCollapsed] = useState<boolean>(false)
+
+    const aouthUser = useSelector(state => state)
+    const dispatch = useDispatch()
 
   return (
       <Router>
-          <div className={"w-full h-full flex"}>
-              <div className={"h-full mr-5"}>
-                  <SideBar sideBarCollapsed={sideBarCollapsed} setSideBarCollapsed={setSideBarCollapsed}></SideBar>
-              </div>
-
-              <div className={"w-full p-4 pl-0 overflow-y-scroll"}>
-                  <div className={"mb-4"}><Header sideBarCollapsed={sideBarCollapsed} setSideBarCollapsed={setSideBarCollapsed}></Header></div>
-                  <Main></Main>
-              </div>
-          </div>
+          <Switch>
+              {mainRoutes.map(item => {
+                  return (
+                      <PrivateRoute key={item.path} path={item.path} exact={item.exact} Component={item.Component} loginreq={true}></PrivateRoute>
+                  )
+              })}
+          </Switch>
       </Router>
   );
 }

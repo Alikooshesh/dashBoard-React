@@ -1,10 +1,11 @@
 import React from "react";
+import {RouteComponentProps} from "react-router";
 import { MdSettingsApplications , MdShoppingCart , MdStore , MdPermIdentity } from "react-icons/md";
 import DashboardSmallCard from "./dashboardSmallCard";
 import DoughnutChart from "../../../charts/Doughnut";
 import VerticalBar from "../../../charts/VerticalBar";
 
-const DashboardMainPage:React.FC = () => {
+const DashboardMainPage = (props:RouteComponentProps) => {
     return (
         <div className={"w-full h-full"}>
             <div className={"w-full h-auto mb-4"}>
